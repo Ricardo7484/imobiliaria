@@ -10,30 +10,31 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-@Document(collection = "Proprietario")
-public class Proprietario {
+@Document(collection = "Funcionario")
+public class Funcionario {
     
     @Id
     private int id;
-    private String nome;
+    private String cracha;
+	private String nome;
 	private String sobrenome;
 	private String telefone;
-	private String dataCadastro;
 	private String email;
-    private Boolean status;
-
-    public Proprietario() {
+    private String status;
+    private String funcao;
+    
+    public Funcionario() {
     }
 
-    public Proprietario(String nome, String sobrenome, String telefone, String dataCadastro, String email,
-            Boolean status) {
+    public Funcionario(String cracha, String nome, String sobrenome, String telefone, String email, String status,
+            String funcao) {
+        this.cracha = cracha;
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.telefone = telefone;
-        this.dataCadastro = dataCadastro;
         this.email = email;
         this.status = status;
+        this.funcao = funcao;
     }
-
     
 }
