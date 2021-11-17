@@ -34,19 +34,36 @@ public class ProprietarioController {
     }
 
     @GetMapping("/buscaProprietario/{id}")
-    public Optional<Proprietario> buscaProprietario(@PathVariable int id){
+    public Optional<Proprietario> buscaProprietario(@PathVariable String id){
         return repository.findById(id);
     }
 
+    //@GetMapping("/buscaProprietario/{id}")
+    //public Optional<Proprietario> buscaProprietario(@PathVariable int id){
+    //    return repository.findById(id);
+    //}
+
     @PutMapping("/atualizaProprietario/{id}")
-    public String atualizaProprietario(@PathVariable int id, @RequestBody Proprietario proprietario){
+    public String atualizaProprietario(@PathVariable String id, @RequestBody Proprietario proprietario){
         repository.save(proprietario);
         return "Proprietario com Id " + proprietario.getId() + " atualizado";
     }
 
+    //@PutMapping("/atualizaProprietario/{id}")
+    //public String atualizaProprietario(@PathVariable int id, @RequestBody Proprietario proprietario){
+    //    repository.save(proprietario);
+    //    return "Proprietario com Id " + proprietario.getId() + " atualizado";
+    //}
+
     @DeleteMapping("/deletaProprietario/{id}")
-    public String deletaProprietario(@PathVariable int id){
+    public String deletaProprietario(@PathVariable String id){
         repository.deleteById(id);
         return "Proprietario com Id " + id + "foi deletado";
     }
+
+    //@DeleteMapping("/deletaProprietario/{id}")
+    //public String deletaProprietario(@PathVariable int id){
+    //    repository.deleteById(id);
+    //    return "Proprietario com Id " + id + "foi deletado";
+    //}
 }

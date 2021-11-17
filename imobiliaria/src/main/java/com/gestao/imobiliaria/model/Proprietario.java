@@ -14,25 +14,23 @@ import lombok.ToString;
 public class Proprietario {
     
     @Id
-    private int id;
+    private String id;
+    //private int id;
     private String nome;
 	private String sobrenome;
 	private String telefone;
 	private String dataCadastro;
 	private String email;
-    private Boolean status;
 
     public Proprietario() {
     }
 
-    public Proprietario(String nome, String sobrenome, String telefone, String dataCadastro, String email,
-            Boolean status) {
+    public Proprietario(String nome, String sobrenome, String telefone, String dataCadastro, String email) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.telefone = telefone;
         this.dataCadastro = dataCadastro;
         this.email = email;
-        this.status = status;
     }
 
     

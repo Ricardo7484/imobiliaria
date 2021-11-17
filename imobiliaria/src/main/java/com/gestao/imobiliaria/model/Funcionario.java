@@ -14,7 +14,8 @@ import lombok.ToString;
 public class Funcionario {
     
     @Id
-    private int id;
+    private String id;
+    //private int id;
     private String cracha;
 	private String nome;
 	private String sobrenome;

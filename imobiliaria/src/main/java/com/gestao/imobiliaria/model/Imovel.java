@@ -14,7 +14,8 @@ import lombok.ToString;
 public class Imovel {
     
     @Id
-    private int id;
+    private String id;
+    //private int id;
     private String rua;
     private int numero;
     private String bairro;
@@ -28,8 +29,33 @@ public class Imovel {
     private String tipoImovel;
     private String situacaoImóvel;
     private String imovelFinanciado; 
-    Imóvel no Nome do Proprietário 
-Proprietário Aceita Troca 
-Salvar fotos do imóvel 
+    private String imóvelNomeProprietário;
+    private String aceitaTroca; 
+    private String novosFotos;
+    
+    public Imovel() {
+    }
+
+    public Imovel(String rua, int numero, String bairro, String cidade, String pais, String cep, double preco,
+            int idProprietario, float porcentagemDesconto, String dataCadastro, String tipoImovel,
+            String situacaoImóvel, String imovelFinanciado, String imóvelNomeProprietário, String aceitaTroca,
+            String novosFotos) {
+        this.rua = rua;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.cidade = cidade;
+        this.pais = pais;
+        this.cep = cep;
+        this.preco = preco;
+        this.idProprietario = idProprietario;
+        this.porcentagemDesconto = porcentagemDesconto;
+        this.dataCadastro = dataCadastro;
+        this.tipoImovel = tipoImovel;
+        this.situacaoImóvel = situacaoImóvel;
+        this.imovelFinanciado = imovelFinanciado;
+        this.imóvelNomeProprietário = imóvelNomeProprietário;
+        this.aceitaTroca = aceitaTroca;
+        this.novosFotos = novosFotos;
+    }
 
 }
