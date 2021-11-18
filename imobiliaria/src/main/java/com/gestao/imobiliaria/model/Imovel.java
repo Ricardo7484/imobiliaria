@@ -23,7 +23,8 @@ public class Imovel {
     private String pais;
     private String cep;
     private double preco;
-    private int idProprietario;
+    private String idProprietario;
+    //private int idProprietario;
     private float porcentagemDesconto; 
     private String dataCadastro;
     private String tipoImovel;
@@ -37,7 +38,7 @@ public class Imovel {
     }
 
     public Imovel(String rua, int numero, String bairro, String cidade, String pais, String cep, double preco,
-            int idProprietario, float porcentagemDesconto, String dataCadastro, String tipoImovel,
+            String idProprietario, float porcentagemDesconto, String dataCadastro, String tipoImovel,
             String situacaoImóvel, String imovelFinanciado, String imóvelNomeProprietário, String aceitaTroca,
             String novosFotos) {
         this.rua = rua;

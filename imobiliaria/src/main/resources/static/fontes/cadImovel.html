@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en" ng-app="moduloImovel">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Cadastro de Imóveis</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+
+    <script src="../js/angular.js"></script>
+    <script src="../controller/controllerImovel.js"></script>
+
+</head>
+<body class="bg-white" ng-controller="cadImovelController">
+
+<header class="p-3 bg-dark text-white fixed-top">
+    <div class="container-fluid">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                    <use xlink:href="#bootstrap"/>
+                </svg>
+            </a>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="principal.html" class="nav-link px-2 text-white">Imobiliária</a></li>
+                <li><a href="albumgeral.html" class="nav-link px-2 text-white">Comprar</a></li>
+                <li><a href="albumgeral.html" class="nav-link px-2 text-white">Alugar</a></li>
+                <li><a href="albumgeral.html" class="nav-link px-2 text-white">Ofertas</a></li>
+                <li><a href="contato.html" class="nav-link px-2 text-white">Contato</a></li>
+            </ul>
+            <div class="text-end">
+                <a class="btn btn-warning" href="login.html" role="button">Login</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="py-6 text-center">
+            <img class="d-block mx-auto mb-4" src="../imagens/imobiliaria.png" alt="" width="72" height="57">
+            <h2>Cadastro de Imoveis</h2>
+        </div>
+        <h4 class="mb-3">Imóvel</h4>
+        <hr class="my-4">
+        <form class="needs-validation" novalidate>
+            <div class="row g-3">
+                <div class="col-sm-3">
+                    <label for="rua" class="form-label">Rua</label>
+                    <input type="text" ng-model= "imovel.rua" class="form-control" id="rua" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe a rua.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="numero" class="form-label">Número</label>
+                    <input type="text" ng-model= "imovel.numero" class="form-control" id="numero" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe o número.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input type="text" ng-model= "imovel.bairro" class="form-control" id="bairro" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe o bairro.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" ng-model= "imovel.cidade" class="form-control" id="cidade" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe a cidade.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="pais" class="form-label">País</label>
+                    <input type="text" ng-model= "imovel.pais" class="form-control" id="pais" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe o país.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" ng-model= "imovel.cep" class="form-control" id="cep" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe o CEP.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="preco" class="form-label">Preço</label>
+                    <input type="text" ng-model= "imovel.preco" class="form-control" id="preco" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe o preço.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="idProprietario" class="form-label">ID do Proprietário</label>
+                    <input type="text" ng-model= "imovel.idProprietario" class="form-control" id="idProprietario" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe o ID do Proprietário.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="descPromocao" class="form-label">% de Desconto</label>
+                    <input type="text" ng-model= "imovel.descPromocao" class="form-control" id="descPromocao" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe a porcentagem de desconto.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="dataCadImovel" class="form-label">Data de cadastro</label>
+                    <input type="text" ng-model= "imovel.dataCadImovel" class="form-control" id="dataCadImovel" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe a data de cadastro.
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="tipo" class="form-label">Tipo do Imóvel</label>
+                    <input type="" ng-model= "imovel.tipo" class="form-control" id="tipo" placeholder="" readonly>
+                </div>
+                <div class="col-sm-3">
+                    <label for="situacao" class="form-label">Situação do Imóvel</label>
+                    <input type="text" ng-model= "imovel.situacao" class="form-control" id="situacao" placeholder="" readonly>
+                </div>
+                <div class="col-sm-3">
+                    <label for="finciado" class="form-label">Imóvel Financiado</label>
+                    <input type="text" ng-model= "imovel.finciado" class="form-control" id="finciado" placeholder="" readonly>
+                </div>
+                <div class="col-sm-3">
+                    <label for="alienado" class="form-label">Imóvel no Nome do Proprietário</label>
+                    <input type="text" ng-model= "imovel.alienado" class="form-control" id="alienado" placeholder="" readonly>
+                </div>
+                <div class="col-sm-3">
+                    <label for="troca" class="form-label">Proprietário Aceita Troca</label>
+                    <input type="text" ng-model= "imovel.troca" class="form-control" id="troca" placeholder="" readonly>
+                </div>
+                <div class="col-md-3">
+                    <label for="formFileMultiple" class="form-label">Salvar fotos do imóvel</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple/>
+                </div>
+                <div class="col-md-2">
+                    <label for="tipoimovel" class="form-label">Tipo do Imóvel</label>
+                    <select class="form-select" id="tipoimovel" required>
+                        <option value="">Informe...</option>
+                        <option>Venda</option>
+                        <option>Aluguel</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe o tipo.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="situacaoimovel" class="form-label">Situação do Imóvel</label>
+                    <select class="form-select" id="situacaoimovel" required>
+                        <option value="">Informe...</option>
+                        <option>Livre</option>
+                        <option>Ocupado</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe a situação.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="imovelfinanciado" class="form-label">Imóvel Financiado</label>
+                    <select class="form-select" id="imovelfinanciado" required>
+                        <option value=" ">Informe...</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe se imóvel está financiado.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="aceitaimovel" class="form-label">Aceita Outro Imóvel</label>
+                    <select class="form-select" id="aceitaimovel" required>
+                        <option value="">Informe...</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe se aceita troca por outro imóvel.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="imovelAlienado" class="form-label">Imóvel Alienado</label>
+                    <select class="form-select" id="imovelAlienado" required>
+                        <option value="">Informe...</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe se imóvel está alienado.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="pesquisa" class="form-label">Pesquisa</label>
+                    <input type="text" ng-model="pesquisaImovel" class="form-control" id="pesquisa" placeholder="">
+                </div>
+                <div class="col-sm-6 text-center">
+                    <br>
+                    <button type="submit" ng-click="limparImovel()" class="w-25 btn btn-success">Limpar</button>
+                    <button type="submit" ng-click="gravarImovel()" class="w-25 btn btn-primary">Gravar</button>
+                    <button type="submit" ng-click="excluirImovel()" class="w-25 btn btn-danger">Excluir</button>
+                </div>
+                <table class="table table-striped table-hover text-center">
+                    <thead>
+                    <tr>
+                        <th scope="col">Rua</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">Bairro</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Preco</th>
+                        <th scope="col">ID do Proprietário</th>
+                        <th scope="col">Data de Cadastro</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="listaImoveis in imoveis | filter:pesquisaImovel" ng-click="selecionaImovel(listaImoveis)">
+                        <td>{{listaImoveis.rua}}</td>
+                        <td>{{listaImoveis.numero}}</td>
+                        <td>{{listaImoveis.bairro}}</td>
+                        <td>{{listaImoveis.cidade}}</td>
+                        <td>{{listaImoveis.preco}}</td>
+                        <td>{{listaImoveis.idProprietario}}</td>
+                        <td>{{listaImoveis.dataCadImovel}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</main>
+
+<!--
+<main>
+    teste
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="../imagens/imobiliaria.png" alt="" width="72" height="57">
+            <h2>Cadastro de Imóveis</h2>
+        </div>
+        <h4 class="mb-3">Imóvel</h4>
+        <form class="needs-validation" novalidate>
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <label for="rua" class="form-label">Rua</label>
+                    <input type="text" class="form-control" id="rua" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Informe o nome da rua.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="numero" class="form-label">Número</label>
+                    <input type="text" class="form-control" id="numero" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Informe o número do imóvel.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" id="bairro" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Informe o bairro.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Informe a cidade.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="pais" class="form-label">País</label>
+                    <input type="text" class="form-control" id="pais" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Informe o país.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="cep" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Informe o CEP.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="preco" class="form-label">Preço</label>
+                    <input type="text" class="form-control" id="preco" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Informe o valor do imóvel.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="idproprietario" class="form-label">ID do Proprietario</label>
+                    <input type="text" class="form-control" id="idproprietario" placeholder="" value=""
+                           required>
+                    <div class="invalid-feedback">
+                        Informe o código do proprietário.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="tipoimovel" class="form-label">Tipo do Imóvel</label>
+                    <select class="form-select" id="tipoimovel" required>
+                        <option value="">Informe...</option>
+                        <option>Venda</option>
+                        <option>Aluguel</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe o tipo.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="situacaoimovel" class="form-label">Situação do Imóvel</label>
+                    <select class="form-select" id="situacaoimovel" required>
+                        <option value="">Informe...</option>
+                        <option>Livre</option>
+                        <option>Ocupado</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe a situação.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="imovelfinanciado" class="form-label">Imóvel Financiado</label>
+                    <select class="form-select" id="imovelfinanciado" required>
+                        <option value="">Informe...</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe se imóvel está financiado.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="imovelnomeproprietario" class="form-label">Imóvel no Nome do
+                        Proprietário</label>
+                    <select class="form-select" id="imovelnomeproprietario" required>
+                        <option value="">Informe...</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe se imóvel está no nome do proprietário.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="aceitaimovel" class="form-label">Proprietário Aceita Outro Imóvel</label>
+                    <select class="form-select" id="aceitaimovel" required>
+                        <option value="">Informe...</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe se aceita troca por outro imóvel.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="formFileMultiple" class="form-label">Salvar fotos do imóvel</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple/>
+                </div>
+            </div>
+            <hr class="my-4">
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Confirme</button>
+        </form>
+    </div>
+    <footer class="my-1 pt-1 text-muted text-center text-small"></footer>
+</main>-->
+
+<script src="../js/jquery.mim.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/form-validation.js"></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

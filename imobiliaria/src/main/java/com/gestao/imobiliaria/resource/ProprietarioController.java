@@ -21,7 +21,7 @@ public class ProprietarioController {
     @Autowired
     private ProprietarioRepository repository;
 
-    @PostMapping("inseriProprietario")
+    @PostMapping("/inseriProprietario")
     public String inseriProprietario(@RequestBody Proprietario proprietario){
         repository.save(proprietario);
         return "Proprietario adicionado com Id " + proprietario.getId();
