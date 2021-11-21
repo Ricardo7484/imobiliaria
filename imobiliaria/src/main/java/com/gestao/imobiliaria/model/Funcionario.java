@@ -15,27 +15,30 @@ public class Funcionario {
     
     @Id
     private String id;
-    //private int id;
     private String cracha;
 	private String nome;
 	private String sobrenome;
 	private String telefone;
 	private String email;
     private String status;
-    private String funcao;
+    private String cargo;
+    private String senha;
+    private String dataCadastro;
     
     public Funcionario() {
     }
 
     public Funcionario(String cracha, String nome, String sobrenome, String telefone, String email, String status,
-            String funcao) {
+            String cargo, String senha, String dataCadastro) {
         this.cracha = cracha;
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.telefone = telefone;
         this.email = email;
         this.status = status;
-        this.funcao = funcao;
+        this.cargo = cargo;
+        this.senha = senha;
+        this.dataCadastro = dataCadastro;
     }
-    
+
 }

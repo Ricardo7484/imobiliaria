@@ -1,7 +1,5 @@
-{"proprietarios":
-  [
+[
     {"nome": "Fulano", "sobrenome": "De Tal", "email": "fulano@imobiliaria.com", "telefone": "991919191", "dataCadProprietario": "15/10/2021"},
     {"nome": "Beltrano", "sobrenome": "De Tal", "email": "beltrano@imobiliaria.com", "telefone": "992929292", "dataCadProprietario": "20/11/2021"},
     {"nome": "Ciclano", "sobrenome": "De Tal", "email": "ciclano@imobiliaria.com", "telefone": "993939393", "dataCadProprietario": "25/12/2021"}
-  ]
-}
+]

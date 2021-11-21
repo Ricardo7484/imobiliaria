@@ -21,7 +21,7 @@ public class FuncionarioController {
     @Autowired
     private FuncionarioRepository repository;
 
-    @PostMapping("inseriFuncionario")
+    @PostMapping("/inseriFuncionario")
     public String inseriFuncionario(@RequestBody Funcionario funcionario){
         repository.save(funcionario);
         return "Funcionário adicionado com Id " + funcionario.getId();
@@ -38,32 +38,15 @@ public class FuncionarioController {
         return repository.findById(id);
     }
 
-    //@GetMapping("/buscaFuncionario/{id}")
-    //public Optional<Funcionario> buscaFuncionario(@PathVariable int id){
-    //    return repository.findById(id);
-    //}
-
     @PutMapping("/atualizaFuncionario/{id}")
     public String atualizaFuncionario(@PathVariable String id, @RequestBody Funcionario funcionario){
         repository.save(funcionario);
         return "Funcionario com Id " + funcionario.getId() + " atualizado";
     }
 
-    //@PutMapping("/atualizaFuncionario/{id}")
-    //public String atualizaFuncionario(@PathVariable int id, @RequestBody Funcionario funcionario){
-    //    repository.save(funcionario);
-    //    return "Funcionario com Id " + funcionario.getId() + " atualizado";
-    //}
-
     @DeleteMapping("/deletaFuncionario/{id}")
     public String deletaFuncionario(@PathVariable String id){
         repository.deleteById(id);
         return "Funcionario com Id " + id + "foi deletado";
     }
-
-    //@DeleteMapping("/deletaFuncionario/{id}")
-    //public String deletaFuncionario(@PathVariable int id){
-    //    repository.deleteById(id);
-    //    return "Funcionario com Id " + id + "foi deletado";
-    //}
 }

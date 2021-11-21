@@ -15,7 +15,6 @@ public class Imovel {
     
     @Id
     private String id;
-    //private int id;
     private String rua;
     private int numero;
     private String bairro;
@@ -24,7 +23,6 @@ public class Imovel {
     private String cep;
     private double preco;
     private String idProprietario;
-    //private int idProprietario;
     private float porcentagemDesconto; 
     private String dataCadastro;
     private String tipoImovel;
@@ -32,7 +30,9 @@ public class Imovel {
     private String imovelFinanciado; 
     private String imóvelNomeProprietário;
     private String aceitaTroca; 
-    private String novosFotos;
+    private String foto01;
+    private String foto02;
+    private String foto03;
     
     public Imovel() {
     }
@@ -40,7 +40,7 @@ public class Imovel {
     public Imovel(String rua, int numero, String bairro, String cidade, String pais, String cep, double preco,
             String idProprietario, float porcentagemDesconto, String dataCadastro, String tipoImovel,
             String situacaoImóvel, String imovelFinanciado, String imóvelNomeProprietário, String aceitaTroca,
-            String novosFotos) {
+            String foto01, String foto02, String foto03) {
         this.rua = rua;
         this.numero = numero;
         this.bairro = bairro;
@@ -56,7 +56,9 @@ public class Imovel {
         this.imovelFinanciado = imovelFinanciado;
         this.imóvelNomeProprietário = imóvelNomeProprietário;
         this.aceitaTroca = aceitaTroca;
-        this.novosFotos = novosFotos;
+        this.foto01 = foto01;
+        this.foto02 = foto02;
+        this.foto03 = foto03;
     }
 
 }

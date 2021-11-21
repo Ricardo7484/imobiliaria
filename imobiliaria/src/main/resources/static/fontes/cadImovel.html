@@ -98,74 +98,74 @@
                         Informe a cidade.
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for="pais" class="form-label">País</label>
                     <input type="text" ng-model= "imovel.pais" class="form-control" id="pais" placeholder="" required>
                     <div class="invalid-feedback">
                         Informe o país.
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for="cep" class="form-label">CEP</label>
                     <input type="text" ng-model= "imovel.cep" class="form-control" id="cep" placeholder="" required>
                     <div class="invalid-feedback">
                         Informe o CEP.
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for="preco" class="form-label">Preço</label>
                     <input type="text" ng-model= "imovel.preco" class="form-control" id="preco" placeholder="" required>
                     <div class="invalid-feedback">
                         Informe o preço.
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <label for="idProprietario" class="form-label">ID do Proprietário</label>
-                    <input type="text" ng-model= "imovel.idProprietario" class="form-control" id="idProprietario" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Informe o ID do Proprietário.
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <label for="descPromocao" class="form-label">% de Desconto</label>
+                <div class="col-sm-2">
+                    <label for="descPromocao" class="form-label">% de desconto atual</label>
                     <input type="text" ng-model= "imovel.descPromocao" class="form-control" id="descPromocao" placeholder="" required>
                     <div class="invalid-feedback">
                         Informe a porcentagem de desconto.
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
+                    <label for="idProprietario" class="form-label">ID do proprietário</label>
+                    <input type="text" ng-model= "imovel.idProprietario" class="form-control" id="idProprietario" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe o ID do Proprietário.
+                    </div>
+                </div>
+                <div class="col-sm-2">
                     <label for="dataCadImovel" class="form-label">Data de cadastro</label>
                     <input type="text" ng-model= "imovel.dataCadImovel" class="form-control" id="dataCadImovel" placeholder="" required>
                     <div class="invalid-feedback">
                         Informe a data de cadastro.
                     </div>
                 </div>
-                <div class="col-sm-3">
-                    <label for="tipo" class="form-label">Tipo do Imóvel</label>
+                <div class="col-sm-2">
+                    <label for="tipo" class="form-label">Tipo do imóvel</label>
                     <input type="" ng-model= "imovel.tipo" class="form-control" id="tipo" placeholder="" readonly>
                 </div>
-                <div class="col-sm-3">
-                    <label for="situacao" class="form-label">Situação do Imóvel</label>
+                <div class="col-sm-2">
+                    <label for="situacao" class="form-label">Situação do imóvel</label>
                     <input type="text" ng-model= "imovel.situacao" class="form-control" id="situacao" placeholder="" readonly>
                 </div>
-                <div class="col-sm-3">
-                    <label for="finciado" class="form-label">Imóvel Financiado</label>
+                <div class="col-sm-2">
+                    <label for="finciado" class="form-label">Imóvel financiado</label>
                     <input type="text" ng-model= "imovel.finciado" class="form-control" id="finciado" placeholder="" readonly>
                 </div>
-                <div class="col-sm-3">
-                    <label for="alienado" class="form-label">Imóvel no Nome do Proprietário</label>
+                <div class="col-sm-2">
+                    <label for="alienado" class="form-label">Imóvel alienado</label>
                     <input type="text" ng-model= "imovel.alienado" class="form-control" id="alienado" placeholder="" readonly>
                 </div>
-                <div class="col-sm-3">
-                    <label for="troca" class="form-label">Proprietário Aceita Troca</label>
+                <div class="col-sm-2">
+                    <label for="troca" class="form-label">Aceita oureo imóvel</label>
                     <input type="text" ng-model= "imovel.troca" class="form-control" id="troca" placeholder="" readonly>
                 </div>
-                <div class="col-md-3">
-                    <label for="formFileMultiple" class="form-label">Salvar fotos do imóvel</label>
+                <div class="col-md-2">
+                    <label for="formFileMultiple" class="form-label">Salvar foto 01</label>
                     <input class="form-control" type="file" id="formFileMultiple" multiple/>
                 </div>
                 <div class="col-md-2">
-                    <label for="tipoimovel" class="form-label">Tipo do Imóvel</label>
+                    <label for="tipoimovel" class="form-label">Tipo do imóvel</label>
                     <select class="form-select" id="tipoimovel" required>
                         <option value="">Informe...</option>
                         <option>Venda</option>
@@ -176,7 +176,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <label for="situacaoimovel" class="form-label">Situação do Imóvel</label>
+                    <label for="situacaoimovel" class="form-label">Situação do imóvel</label>
                     <select class="form-select" id="situacaoimovel" required>
                         <option value="">Informe...</option>
                         <option>Livre</option>
@@ -187,7 +187,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <label for="imovelfinanciado" class="form-label">Imóvel Financiado</label>
+                    <label for="imovelfinanciado" class="form-label">Imóvel financiado</label>
                     <select class="form-select" id="imovelfinanciado" required>
                         <option value=" ">Informe...</option>
                         <option>Sim</option>
@@ -198,7 +198,18 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <label for="aceitaimovel" class="form-label">Aceita Outro Imóvel</label>
+                    <label for="imovelAlienado" class="form-label">Imóvel alienado</label>
+                    <select class="form-select" id="imovelAlienado" required>
+                        <option value="">Informe...</option>
+                        <option>Sim</option>
+                        <option>Não</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Informe se imóvel está alienado.
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <label for="aceitaimovel" class="form-label">Aceita outro imóvel</label>
                     <select class="form-select" id="aceitaimovel" required>
                         <option value="">Informe...</option>
                         <option>Sim</option>
@@ -209,25 +220,22 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <label for="imovelAlienado" class="form-label">Imóvel Alienado</label>
-                    <select class="form-select" id="imovelAlienado" required>
-                        <option value="">Informe...</option>
-                        <option>Sim</option>
-                        <option>Não</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Informe se imóvel está alienado.
-                    </div>
+                    <label for="formFileMultiple" class="form-label">Salvar foto 02</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple/>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <label for="pesquisa" class="form-label">Pesquisa</label>
                     <input type="text" ng-model="pesquisaImovel" class="form-control" id="pesquisa" placeholder="">
                 </div>
                 <div class="col-sm-6 text-center">
                     <br>
-                    <button type="submit" ng-click="limparImovel()" class="w-25 btn btn-success">Limpar</button>
-                    <button type="submit" ng-click="gravarImovel()" class="w-25 btn btn-primary">Gravar</button>
-                    <button type="submit" ng-click="excluirImovel()" class="w-25 btn btn-danger">Excluir</button>
+                    <button type="submit" ng-click="gravarImovel()" class="w-35 btn btn-success">Gravar</button>
+                    <button type="submit" ng-click="atualizarImovel()" class="w-35 btn btn-primary">Atualizar</button>
+                    <button type="submit" ng-click="excluirImovel(id)" class="w-25 btn btn-danger">Excluir</button>
+                </div>
+                <div class="col-md-2">
+                    <label for="formFileMultiple" class="form-label">Salvar fotos 03</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple/>
                 </div>
                 <table class="table table-striped table-hover text-center">
                     <thead>
@@ -236,7 +244,7 @@
                         <th scope="col">Número</th>
                         <th scope="col">Bairro</th>
                         <th scope="col">Cidade</th>
-                        <th scope="col">Preco</th>
+                        <th scope="col">Preço</th>
                         <th scope="col">ID do Proprietário</th>
                         <th scope="col">Data de Cadastro</th>
                     </tr>
