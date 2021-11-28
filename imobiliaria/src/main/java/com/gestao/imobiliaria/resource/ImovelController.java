@@ -21,8 +21,9 @@ public class ImovelController {
     @Autowired
     private ImovelRepository repository;
 
-    @PostMapping("inseriImovel")
+    @PostMapping("/inseriImovel")
     public String inseriImovel(@RequestBody Imovel imovel){
+        System.out.println(imovel);
         repository.save(imovel);
         return "Imovel adicionado com Id " + imovel.getId();
     }
@@ -38,32 +39,15 @@ public class ImovelController {
         return repository.findById(id);
     }
 
-    //@GetMapping("/buscaImovel/{id}")
-    //public Optional<Imovel> buscaImovel(@PathVariable int id){
-    //    return repository.findById(id);
-    //}
-
     @PutMapping("/atualizaImovel/{id}")
     public String atualizaImovel(@PathVariable String id, @RequestBody Imovel imovel){
         repository.save(imovel);
         return "Imovel com Id " + imovel.getId() + " atualizado";
     }
 
-    //@PutMapping("/atualizaImovel/{id}")
-    //public String atualizaImovel(@PathVariable int id, @RequestBody Imovel imovel){
-    //    repository.save(imovel);
-    //    return "Imovel com Id " + imovel.getId() + " atualizado";
-    //}
-
     @DeleteMapping("/deletaImovel/{id}")
     public String deletaImovel(@PathVariable String id){
         repository.deleteById(id);
         return "Imovel com Id " + id + "foi deletado";
     }
-
-    //@DeleteMapping("/deletaImovel/{id}")
-    //public String deletaImovel(@PathVariable int id){
-    //    repository.deleteById(id);
-    //    return "Imovel com Id " + id + "foi deletado";
-    //}
 }

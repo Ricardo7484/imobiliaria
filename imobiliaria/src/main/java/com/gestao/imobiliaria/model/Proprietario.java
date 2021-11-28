@@ -15,7 +15,6 @@ public class Proprietario {
     
     @Id
     private String id;
-    //private int id;
     private String nome;
 	private String sobrenome;
 	private String telefone;

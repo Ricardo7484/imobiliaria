@@ -19,16 +19,16 @@ public class Imovel {
     private int numero;
     private String bairro;
     private String cidade;
-    private String pais;
+    private String estado;
     private String cep;
     private double preco;
     private String idProprietario;
     private float porcentagemDesconto; 
     private String dataCadastro;
     private String tipoImovel;
-    private String situacaoImóvel;
+    private String situacaoImovel;
     private String imovelFinanciado; 
-    private String imóvelNomeProprietário;
+    private String imovelNomeProprietario;
     private String aceitaTroca; 
     private String foto01;
     private String foto02;
@@ -37,24 +37,24 @@ public class Imovel {
     public Imovel() {
     }
 
-    public Imovel(String rua, int numero, String bairro, String cidade, String pais, String cep, double preco,
+    public Imovel(String rua, int numero, String bairro, String cidade, String estado, String cep, double preco,
             String idProprietario, float porcentagemDesconto, String dataCadastro, String tipoImovel,
-            String situacaoImóvel, String imovelFinanciado, String imóvelNomeProprietário, String aceitaTroca,
+            String situacaoImovel, String imovelFinanciado, String imovelNomeProprietario, String aceitaTroca,
             String foto01, String foto02, String foto03) {
         this.rua = rua;
         this.numero = numero;
         this.bairro = bairro;
         this.cidade = cidade;
-        this.pais = pais;
+        this.estado = estado;
         this.cep = cep;
         this.preco = preco;
         this.idProprietario = idProprietario;
         this.porcentagemDesconto = porcentagemDesconto;
         this.dataCadastro = dataCadastro;
         this.tipoImovel = tipoImovel;
-        this.situacaoImóvel = situacaoImóvel;
+        this.situacaoImovel = situacaoImovel;
         this.imovelFinanciado = imovelFinanciado;
-        this.imóvelNomeProprietário = imóvelNomeProprietário;
+        this.imovelNomeProprietario = imovelNomeProprietario;
         this.aceitaTroca = aceitaTroca;
         this.foto01 = foto01;
         this.foto02 = foto02;

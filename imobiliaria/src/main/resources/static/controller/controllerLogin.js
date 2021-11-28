@@ -1,28 +1,30 @@
-var moduloProprietario = angular.module('moduloProprietario', []);
+var moduloLogin = angular.module('moduloLogin', []);
 
-moduloProprietario.controller("cadProprietarioController", function ($scope) {
-    $scope.proprietarios = [
-        {nome: 'Ricardo1', sobrenome: 'Teixeira1', email: 'ricardo1@hotmail.com', telefone: '991919191', dataCadProprietario: '15/10/2021'},
-        {nome: 'Ricardo2', sobrenome: 'Teixeira2', email: 'ricardo2@hotmail.com', telefone: '992929292', dataCadProprietario: '15/10/2021'},
-        {nome: 'Ricardo3', sobrenome: 'Teixeira3', email: 'ricardo3@hotmail.com', telefone: '993939393', dataCadProprietario: '15/10/2021'},
-        {nome: 'Ricardo4', sobrenome: 'Teixeira4', email: 'ricardo4@hotmail.com', telefone: '994949494', dataCadProprietario: '15/10/2021'},
-    ];
+moduloLogin.controller("loginController", function ($scope, $http) {
+    $http.get('http://localhost:8080/buscaFuncionarios').then(function(response){
+        $scope.funcionarios = response.data;
+    })
 
-    $scope.selecionaProprietario = function (proprietarioSelecionado) {
-        $scope.proprietario = proprietarioSelecionado;
-    };
+    //$scope.gravarFuncionario = function () {
+    //    alert("Create");
+    //    $http.post('http://localhost:8080/inseriFuncionario/', {"cracha": $scope.funcionario.cracha, "nome": $scope.funcionario.nome, "sobrenome": $scope.funcionario.sobrenome, "telefone": $scope.funcionario.telefone, "email": $scope.funcionario.email, "status": $scope.funcionario.status, "funcao": $scope.funcionario.funcao, "senha": $scope.funcionario.senha, "dataCadastro": $scope.funcionario.dataCadastro, "cargo": $scope.funcionario.cargo}).then(function(response){});
+    //    window.location.reload();  //Limpa a tela
+    //};
 
-    $scope.limparProprietario = function () {
-        $scope.proprietario = {};
-    };
+    //$scope.excluirFuncionario = function () {
+    //    //alert($scope.funcionario.nome);  //Mostra valores vindo do HTML
+    //    alert("Delete");
+    //    $http.delete('http://localhost:8080/deletaFuncionario/'+$scope.funcionario.id).then(function(response){})
+    //    window.location.reload();  //Limpa a tela
+    //};
 
-    $scope.gravarProprietario = function () {
-        $scope.proprietarios.push($scope.proprietario);
-        $scope.limparProprietario();
-    };
+    //$scope.selecionaFuncionario = function (funcionarioSelecionado) {
+    //    $scope.funcionario = funcionarioSelecionado;
+    //};
 
-    $scope.excluirProprietario = function () {
-        $scope.proprietarios.splice($scope.proprietarios.indexOf($scope.proprietario), 1);
-        $scope.limparProprietario();
-    };
+    //$scope.atualizarFuncionario = function () {
+    //    alert("Update");
+    //    $http.post('http://localhost:8080/inseriFuncionario/', {"id": $scope.funcionario.id, "cracha": $scope.funcionario.cracha, "nome": $scope.funcionario.nome, "sobrenome": $scope.funcionario.sobrenome, "telefone": $scope.funcionario.telefone, "email": $scope.funcionario.email, "status": $scope.funcionario.status, "funcao": $scope.funcionario.funcao, "senha": $scope.funcionario.senha, "dataCadastro": $scope.funcionario.dataCadastro, "cargo": $scope.funcionario.cargo}).then(function(response){});
+    //    window.location.reload();  //Limpa a tela
+    //};
 });

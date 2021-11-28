@@ -29,7 +29,7 @@ public class FuncionarioController {
 
     @GetMapping("/buscaFuncionarios")
     public List<Funcionario> buscaFuncionarios(){
-        System.out.println(repository.findAll());
+        //System.out.println(repository.findAll());
         return repository.findAll();
     }
 

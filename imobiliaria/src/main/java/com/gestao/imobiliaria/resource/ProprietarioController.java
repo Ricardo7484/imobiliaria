@@ -29,7 +29,7 @@ public class ProprietarioController {
 
     @GetMapping("/buscaProprietarios")
     public List<Proprietario> buscaProprietarios(){
-        System.out.println(repository.findAll());
+        //System.out.println(repository.findAll());
         return repository.findAll();
     }
 
