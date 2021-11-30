@@ -1,4 +1,7 @@
-<!doctype html>
+<%@ page language="Java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--<!doctype html>-->
 <html lang="en" ng-app="moduloFuncionario">
 <head>
     <meta charset="utf-8">
@@ -66,7 +69,7 @@
 </header>
 
 <main class="form-signin">
-    <!--<form>-->
+    <form>
         <img class="mb-4" src="../imagens/imobiliaria.png" alt="" width="72" height="57">
         <h1 class="h3 mb-3 fw-normal">Informe seus dados</h1>
         <div class="form-floating">
@@ -88,7 +91,7 @@
         <div class="col-sm-3">
             <button type="submit" ng-click="excluirFuncionario(id)" class="w-100 btn btn-primary">Entrar</button>
         </div>
-    <!--</form>-->
+    </form>
     
     <!--<p>Estados (json): {{funcionarios| json }}</p>-->
 

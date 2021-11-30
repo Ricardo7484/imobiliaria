@@ -23,14 +23,14 @@ public class ImovelController {
 
     @PostMapping("/inseriImovel")
     public String inseriImovel(@RequestBody Imovel imovel){
-        System.out.println(imovel);
+        //System.out.println(imovel);
         repository.save(imovel);
         return "Imovel adicionado com Id " + imovel.getId();
     }
 
     @GetMapping("/buscaImoveis")
     public List<Imovel> buscaImoveis(){
-        System.out.println(repository.findAll());
+        //System.out.println(repository.findAll());
         return repository.findAll();
     }
 

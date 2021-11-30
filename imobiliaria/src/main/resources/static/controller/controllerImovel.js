@@ -7,7 +7,26 @@ moduloImovel.controller("cadImovelController", function ($scope, $http) {
     })
 
     $scope.gravarImovel = function () {
-        $http.post('http://localhost:8080/inseriImovel/', {"rua": $scope.imovel.rua, "numero": $scope.imovel.numero, "bairro": $scope.imovel.bairro, "cidade": $scope.imovel.cidade, "estado": $scope.imovel.estado, "cep": $scope.imovel.cep, "preco": $scope.imovel.preco, "idProprietario": $scope.imovel.idProprietario, "porcentagemDesconto": $scope.imovel.porcentagemDesconto, "dataCadastro": $scope.imovel.dataCadastro, "tipoImovel": $scope.imovel.tipoImovel, "situacaoImovel": $scope.imovel.situacaoImovel, "imovelFinanciado": $scope.imovel.imovelFinanciado, "imovelNomeProprietario": $scope.imovel.imovelNomeProprietario, "aceitaTroca": $scope.imovel.aceitaTroca, "foto01": $scope.imovel.foto01, "foto02": $scope.imovel.foto02, "foto03": $scope.imovel.foto03}).then(function(response){});
+        $http.post('http://localhost:8080/inseriImovel/', {
+            "rua": $scope.imovel.rua, 
+            "numero": $scope.imovel.numero, 
+            "bairro": $scope.imovel.bairro, 
+            "cidade": $scope.imovel.cidade, 
+            "estado": $scope.imovel.estado, 
+            "cep": $scope.imovel.cep, 
+            "preco": $scope.imovel.preco, 
+            "idProprietario": $scope.imovel.idProprietario, 
+            "porcentagemDesconto": $scope.imovel.porcentagemDesconto, 
+            "dataCadastro": $scope.imovel.dataCadastro, 
+            "tipoImovel": $scope.imovel.tipoImovel, 
+            "situacaoImovel": $scope.imovel.situacaoImovel, 
+            "imovelFinanciado": $scope.imovel.imovelFinanciado, 
+            "imovelNomeProprietario": $scope.imovel.imovelNomeProprietario, 
+            "aceitaTroca": $scope.imovel.aceitaTroca, 
+            "foto01": $scope.imovel.foto01, 
+            "foto02": $scope.imovel.foto02, 
+            "foto03": $scope.imovel.foto03
+        }).then(function(response){});
         window.location.reload();  //Limpa a tela
     };
 
@@ -18,12 +37,8 @@ moduloImovel.controller("cadImovelController", function ($scope, $http) {
         window.location.reload();  //Limpa a tela
     };
     
-    $scope.selecionaImovel = function (imovelSelecionado) {
-        $scope.imovel = imovelSelecionado;
-    };
-    
     $scope.atualizarImovel = function () {
-        alert("Update");
+        //alert("Update");
         $http.post('http://localhost:8080/inseriImovel/', {
             "id": $scope.imovel.id,
             "rua": $scope.imovel.rua,
@@ -48,14 +63,26 @@ moduloImovel.controller("cadImovelController", function ($scope, $http) {
         window.location.reload();  //Limpa a tela
     };
 
-    $scope.addState = function() {
-        alert("Oi");
-        console.log("Oi");
-        $scope.username = 'World';
-        $scope.sayHello = function() {
-            $scope.greeting = 'Hello ' + $scope.username + '!';
-        };
-    }
+    $scope.selecionaImovel = function (imovelSelecionado) {
+        $scope.imovel = imovelSelecionado;
+    };
+
+    $scope.mostraFotos = function (imovelSelecionado) {
+        //console.log(typeof(imovelSelecionado.foto01));
+        //console.log(imovelSelecionado.foto01);
+        document.querySelectorAll('[id="image01"]')[0].src = 'data:image01/jpeg;base64, '+imovelSelecionado.foto01;
+        document.querySelectorAll('[id="image02"]')[0].src = 'data:image02/jpeg;base64, '+imovelSelecionado.foto02;
+        document.querySelectorAll('[id="image03"]')[0].src = 'data:image03/jpeg;base64, '+imovelSelecionado.foto03;
+    };
+
+    //$scope.addState = function() {
+    //    alert("Oi");
+    //    console.log("Oi");
+    //    $scope.username = 'World';
+    //    $scope.sayHello = function() {
+    //        $scope.greeting = 'Hello ' + $scope.username + '!';
+    //    };
+    //}
 
     //$scope.chiliSpicy = function() {
     //    $scope.spice = 'chili';

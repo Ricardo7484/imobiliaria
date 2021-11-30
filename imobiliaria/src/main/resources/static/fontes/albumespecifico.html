@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="moduloImovel">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,8 +29,15 @@
         }
     </style>
 
+    <!-- Custom styles for this template -->
+    <link href="../css/form-validation.css" rel="stylesheet">
+
+    <script src="../js/angular.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../controller/controllerImovel.js"></script>
+
 </head>
-<body>
+<body class="bg-white" ng-controller="cadImovelController">
 
 <header class="p-3 bg-dark text-white fixed-top">
     <div class="container-fluid">
@@ -42,10 +49,13 @@
             </a>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="principal.html" class="nav-link px-2 text-white">Imobiliária</a></li>
-                <li><a href="albumgeral.html" class="nav-link px-2 text-white">Comprar</a></li>
-                <li><a href="albumgeral.html" class="nav-link px-2 text-white">Alugar</a></li>
+                <li><a href="imoveisGerais.html" class="nav-link px-2 text-white">Comprar</a></li>
+                <li><a href="imoveisGerais.html" class="nav-link px-2 text-white">Alugar</a></li>
                 <li><a href="albumgeral.html" class="nav-link px-2 text-white">Ofertas</a></li>
                 <li><a href="contato.html" class="nav-link px-2 text-white">Contato</a></li>
+                <li><a href="cadFuncionario.html" class="nav-link px-2 text-white">Cadastro Funcionário</a></li>
+                <li><a href="cadProprietario.html" class="nav-link px-2 text-white">Cadastro Proprietário</a></li>
+                <li><a href="cadImovel.html" class="nav-link px-2 text-white">Cadastro Imóvel</a></li>
             </ul>
             <div class="text-end">
                 <a class="btn btn-warning" href="login.html" role="button">Login</a>
@@ -55,93 +65,47 @@
 </header>
 
 <main>
-    teste
-
-
-
+    <br>
     <div class="b-example-divider"></div>
     <div class="album py-5 bg-light">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="../imagens/casa1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="../" class="btn btn-sm btn-outline-dark">Visualizar</a>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
-                        </div>
+                        <!--<img src="../imagens/casa1.jpg" class="card-img-top" alt="...">-->
+                        <img src="../imagens/imagemMédiaImovel.jpg" >
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="../imagens/casa2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">R$ 350.000,00</p>
-                            <p class="card-text">Bairro Centro</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="../" class="btn btn-sm btn-outline-dark">Visualizar</a>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
-                        </div>
+                        <img src="../imagens/imagemMédiaImovel.jpg" >
                     </div>
                 </div>
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="../imagens/casa3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="../" class="btn btn-sm btn-outline-dark">Visualizar</a>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
+                        <img src="../imagens/imagemMédiaImovel.jpg" >
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a href="contato.html" class="btn btn-sm btn-outline-dark">Visualizar</a>
                         </div>
+                        <small class="text-muted">20-11-2021</small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <!--<link href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css" rel="stylesheet">
-
-    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
-
-    <table
-            id="table"
-            data-url="json/data1.json"
-            data-filter-control="true"
-            data-show-search-clear-button="true">
-        <thead>
-        <tr>
-            <th data-field="id">ID</th>
-            <th data-field="name" data-filter-control="input">Item Name</th>
-            <th data-field="price" data-filter-control="select">Item Price</th>
-        </tr>
-        </thead>
-    </table>
-
-    <script>
-        $(function() {
-            $('#table').bootstrapTable()
-        })
-    </script>-->
-
-
-    <footer class="my-1 pt-1 text-muted text-center text-small"></footer>
 </main>
 
+<script src="../js/jquery.mim.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/form-validation.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
 
 </body>
