@@ -57,7 +57,6 @@
                 <li><a href="cadProprietario.html" class="nav-link px-2 text-white">Cad. Proprietário</a></li>
                 <li><a href="cadImovel.html" class="nav-link px-2 text-white">Cad. Imóvel</a></li>
                 <li><a href="alerta.html" class="nav-link px-2 text-white">Alerta</a></li>
-
             </ul>
             <div class="text-end">
                 <a class="btn btn-warning" href="login.html" role="button">Login</a>
@@ -70,17 +69,12 @@
     <div class="container">
         <div class="py-6 text-center">
             <img class="d-block mx-auto mb-4" src="../imagens/imobiliaria.png" alt="" width="72" height="57">
-            <h2>Imóveis</h2>
+            <h2>Alerta de Imóveis (90 dias)</h2>
         </div>
         <h4 class="mb-3">Imóvel</h4>
         <hr class="my-4">
         <form class="needs-validation" novalidate>
             <div class="row g-3">
-
-                <div class="col-sm-12">
-                    <label for="pesquisa" class="form-label">Pesquisa</label>
-                    <input type="text" ng-model="pesquisaImovel" class="form-control" id="pesquisa" placeholder="">
-                </div>
                 <div class="container">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         <img id="image01">
@@ -88,46 +82,26 @@
                         <img id="image03">
                     </div>
                 </div>
-                <!--<div class="col">
-                    <div class="card shadow-sm">
-                        <img src="../imagens/casa2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">R$ 350.000,00</p>
-                            <p class="card-text">Bairro Centro</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="albumespecifico.html" class="btn btn-sm btn-outline-dark">Visualizar</a>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
                 <table class="table table-striped table-hover text-center">
                     <thead>
                     <tr>
-                        <!--<th scope="col">Rua</th>-->
-                        <!--<th scope="col">Número</th>-->
-                        <th scope="col">Descrição</th>
-                        <!--<th scope="col">Cidade</th>
+                        <th scope="col">ID do Imóvel</th>
+                        <th scope="col">Bairro</th>
+                        <th scope="col">Cidade</th>
                         <th scope="col">Preço</th>
-                        <th scope="col">Aceita troca</th>-->
-                        <th scope="col">Foto</th>
+                        <th scope="col">ID do Proprietário</th>
+                        <th scope="col">Data de Alteração</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr ng-repeat="listaImoveis in imoveis | filter:pesquisaImovel" 
-                    ng-click="selecionaImovel(listaImoveis); mostraFotos(listaImoveis)">
-                        <!--<td>{{listaImoveis.rua}}</td>-->
-                        <!--<td>{{listaImoveis.numero}}</td>-->
-                        <td>{{listaImoveis.bairro}}<br>{{listaImoveis.cidade}}<br>R${{listaImoveis.preco}}</td>
-                        <!--<td>{{listaImoveis.cidade}}</td>
+                    ng-click="selecionaImovel(listaImoveis); mostraFotos(listaImoveis)"> 
+                    <td>{{listaImoveis.id}}</td>
+                        <td>{{listaImoveis.bairro}}</td>
+                        <td>{{listaImoveis.cidade}}</td>
                         <td>{{listaImoveis.preco}}</td>
-                        <td>{{listaImoveis.aceitaTroca}}</td>-->
-                        <td><img src="../imagens/imagemImovel.jpg" alt="MDN logo"></td>
-                        
-
-                        <!--<td><img src="{{'data:image01/jpeg;base64,' + listaImoveis.foto01}}"></td>-->
+                        <td>{{listaImoveis.idProprietario}}</td>
+                        <td>{{listaImoveis.dataAlteracao}}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -142,6 +116,8 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/form-validation.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
+
+<script src="../controller/controllerImovel.js"></script>
 
 </body>
 </html>

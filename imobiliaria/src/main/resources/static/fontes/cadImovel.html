@@ -56,6 +56,8 @@
                 <li><a href="cadFuncionario.html" class="nav-link px-2 text-white">Cad. Funcionário</a></li>
                 <li><a href="cadProprietario.html" class="nav-link px-2 text-white">Cad. Proprietário</a></li>
                 <li><a href="cadImovel.html" class="nav-link px-2 text-white">Cad. Imóvel</a></li>
+                <li><a href="alerta.html" class="nav-link px-2 text-white">Alerta</a></li>
+
             </ul>
             <div class="text-end">
                 <a class="btn btn-warning" href="login.html" role="button">Login</a>
@@ -68,34 +70,34 @@
     <div class="container">
         <div class="py-6 text-center">
             <img class="d-block mx-auto mb-4" src="../imagens/imobiliaria.png" alt="" width="72" height="57">
-            <h2>Cadastro de Imoveis</h2>
+            <h2>Cadastro de Imóveis</h2>
         </div>
         <h4 class="mb-3">Imóvel</h4>
         <hr class="my-4">
         <form class="needs-validation" novalidate>
             <div class="row g-3">
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for="rua" class="form-label">Rua</label>
                     <input type="text" ng-model= "imovel.rua" class="form-control" id="rua" placeholder="" required>
                     <div class="invalid-feedback">
                         Informe a rua.
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for="numero" class="form-label">Número</label>
                     <input type="text" ng-model= "imovel.numero" class="form-control" id="numero" placeholder="" required>
                     <div class="invalid-feedback">
                         Informe o número.
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for="bairro" class="form-label">Bairro</label>
                     <input type="text" ng-model= "imovel.bairro" class="form-control" id="bairro" placeholder="" required>
                     <div class="invalid-feedback">
                         Informe o bairro.
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
                     <label for="cidade" class="form-label">Cidade</label>
                     <input type="text" ng-model= "imovel.cidade" class="form-control" id="cidade" placeholder="" required>
                     <div class="invalid-feedback">
@@ -175,6 +177,7 @@
                 </div>
 
                 
+
                 <!-- Início dos testes para manipulação dos dados gerados ao converter imagens em base64 -->
                 <!--<div ng-controller="cadImovelController">
                     <button ng-click="chiliSpicy()">Chili</button>
@@ -204,15 +207,53 @@
                     <!--<p>The food is {{imgTest}} spicy!</p>-->
                 <!--<p>Estados (json): {{imoveis| json }}</p>-->
                     <!--<p>Estados (json): {{imoveis| json }}</p>-->
+
+                <!--<input id="inputFileToLoad" type="file"/>
+                <h1 id="foto01">ksksks</h1>
+                <button type="submit" ng-model="imovel.foto01" ng-click="encodeImageFileAsURL()" class="w-35 btn btn-success">Enviar</button>-->
+
                 <!-- Fim da manipulação, para importação das imagens em base 64 para colocação no banco-->
 
-                <div class="col-sm-2">
+<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+            <!--    <input id="inputFileToLoad" type="file"/>
+                <img id="image">
+                <p>The food is {{foto01}} spicy!</p>
+                <button type="submit" ng-model="imovel.foto01" ng-click="encodeImageFileAsURL(1)" class="w-25 btn btn-success">Enviar</button>-->
+
+
+                <!--<input id="inputFileToLoad" type="file"/>
+                <h1 id="foto01">ksksks</h1>
+                <button type="submit" ng-model="imovel.foto01" ng-click="encodeImageFileAsURL()" class="w-35 btn btn-success">Enviar</button>-->
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+<!--<input id="inputFileToLoad" type="file"/>
+<img id="image">
+<p>The food is {{foto01}} spicy!</p>
+<button type="submit" ng-model="imovel.foto01" ng-click="encodeImageFileAsURL(1)" class="w-25 btn btn-success">Enviar</button>-->
+<!------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+                <!--<div class="col-sm-2">
+                    <label for="foto01" class="form-label">Foto 01</label>
+                    <input type="text" ng-model= "imovel.foto01" class="form-control" id="foto01" placeholder="" required>-->
+                    
+                    <!--<input id="inputFileToLoad" type="file"/>
+                    <button type="submit" ng-model="imovel.foto01" ng-click="encodeImageFileAsURL()" class="w-25 btn btn-success">Foto 01</button>
+                    <p id="foto01"></p>
+                    <div class="invalid-feedback">
+                        Insira a foto.
+                    </div>
+                </div>-->
+
+                <!--<div class="col-sm-2">
                     <label for="foto01" class="form-label">Foto 01</label>
                     <input type="text" ng-model= "imovel.foto01" class="form-control" id="foto01" placeholder="" required>
                     <div class="invalid-feedback">
                         Insira a foto.
                     </div>
-                </div>
+                </div>-->
                 <div class="col-md-2">
                     <label for="tipoImovel" class="form-label">Tipo do imóvel</label>
                     <select class="form-select" ng-model="imovel.tipoImovel" id="tipoImovel" required>
@@ -263,6 +304,17 @@
                         Informe se aceita troca por outro imóvel.
                     </div>
                 </div>
+
+
+
+                <div class="col-sm-2">
+                    <label for="foto01" class="form-label">Foto 01</label>
+                    <input type="text" ng-model= "imovel.foto01" class="form-control" id="foto01" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Insira a foto.
+                    </div>
+                </div>
+
                 <div class="col-sm-2">
                     <label for="foto02" class="form-label">Foto 02</label>
                     <input type="text" ng-model= "imovel.foto02" class="form-control" id="foto02" placeholder="" required>
@@ -277,7 +329,14 @@
                         Insira a terceira foto.
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
+                    <label for="dataAlteracao" class="form-label">Data de Alteração</label>
+                    <input type="text" ng-model= "imovel.dataAlteracao" class="form-control" id="dataAlteracao" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Informe a data de alteração.
+                    </div>
+                </div>
+                <div class="col-sm-2">
                     <label for="pesquisa" class="form-label">Pesquisa</label>
                     <input type="text" ng-model="pesquisaImovel" class="form-control" id="pesquisa" placeholder="">
                 </div>
@@ -287,6 +346,28 @@
                     <button type="submit" ng-click="atualizarImovel()" class="w-35 btn btn-primary">Atualizar</button>
                     <button type="submit" ng-click="excluirImovel()" class="w-35 btn btn-danger">Excluir</button>
                 </div>
+
+                <!--<div class="col-sm-2">
+                    <label for="foto01" class="form-label">Foto 01</label>
+                    <input type="text" ng-model= "imovel.foto01" class="form-control" id="foto01" placeholder="" required>-->
+                    <!--<form>-->
+                    <input id="inputFileToLoad" type="file"/>
+                    
+                    <!--<button onclick="encodeImageFileAsURL()">Click me</button>-->
+                    <!--<button ng-click="encodeImageFileAsURL()" class="w-25 btn btn-success">Foto 01</button>-->
+                                 
+                    <button type="submit" ng-model="imovel.foto01" ng-click="encodeImageFileAsURL()" class="w-25 btn btn-success">Gera Base64</button>
+                    <div id="urlFoto"></div>
+                    <p>{{foto01}}</p>
+
+
+                <!--</form>-->
+
+                    <!--<div class="invalid-feedback">
+                        Insira a foto.
+                    </div>
+                </div>-->
+
                 <div class="container">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         <img id="image01">
@@ -330,6 +411,8 @@
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/form-validation.js"></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
+
+<script src="../controller/controllerImovel.js"></script>
 
 </body>
 </html>

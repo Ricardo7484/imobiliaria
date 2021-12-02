@@ -17,7 +17,6 @@
     <link href="../css/form-validation.css" rel="stylesheet">
     <script src="../js/angular.js"></script>
     <script src="../js/angular.min.js"></script>
-    <script src="../controller/controllerFuncionario.js"></script>
 
     <style>
         .bd-placeholder-img {
@@ -57,6 +56,8 @@
                 <li><a href="cadFuncionario.html" class="nav-link px-2 text-white">Cad. Funcionário</a></li>
                 <li><a href="cadProprietario.html" class="nav-link px-2 text-white">Cad. Proprietário</a></li>
                 <li><a href="cadImovel.html" class="nav-link px-2 text-white">Cad. Imóvel</a></li>
+                <li><a href="alerta.html" class="nav-link px-2 text-white">Alerta</a></li>
+
             </ul>
             <div class="text-end">
                 <a class="btn btn-warning" href="login.html" role="button">Login</a>
@@ -86,7 +87,7 @@
         <!--<a class="w-100 btn btn-lg btn-primary" href="cadFuncionario.html" role="button">Entrar</a>-->
 
         <div class="col-sm-3">
-            <button type="submit" ng-click="excluirFuncionario(id)" class="w-100 btn btn-primary">Entrar</button>
+            <button type="submit" ng-click="validaFuncionario(id)" class="w-100 btn btn-primary">Entrar</button>
         </div>
     <!--</form>-->
     
@@ -113,7 +114,9 @@
                     userImageURL:userImageURL,
                     userEmail:userEmail
                 };
-                var objeto = {"emailBanco": "ricardo.200720017@unilasalle.edu.br"};
+
+                var dados = {userID:userID, userName:userName, userImageURL:userImageURL, userEmail:userEmail};
+                var objeto = {"emailBanco": "ricardo.200720017@unilasalle.edu.br", "statusBanco": "Inativo"};
                     //console.log(objeto.atributo1);
                 if(userEmail == objeto.emailBanco){
                     var msg = "Usuário autorizado!";
@@ -130,6 +133,9 @@
             //console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
         }
     </script>
+
+    <script src="../controller/controllerFuncionario.js"></script>
+
 </main>
 
 </body>
